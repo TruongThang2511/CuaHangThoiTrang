@@ -146,6 +146,8 @@
     <Compile Include="Areas\Admin\Controllers\SizeController.cs" />
     <Compile Include="Areas\Admin\Controllers\ThuonghieuController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="DAO\DanhMucDAO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1855,6 +1857,93 @@
     <Content Include="Assets\Admin\vendor\jquery\jquery.min.js" />
     <Content Include="Assets\Admin\vendor\jquery\jquery.slim.js" />
     <Content Include="Assets\Admin\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="Assets\Client\css\bootstrap.css" />
+    <Content Include="Assets\Client\css\creditly.css" />
+    <Content Include="Assets\Client\css\easy-responsive-tabs.css" />
+    <Content Include="Assets\Client\css\flexslider.css" />
+    <Content Include="Assets\Client\css\fontawesome-all.css" />
+    <Content Include="Assets\Client\css\menu.css" />
+    <Content Include="Assets\Client\css\popuo-box.css" />
+    <Content Include="Assets\Client\css\style.css" />
+    <Content Include="Assets\Client\images\a.jpg" />
+    <Content Include="Assets\Client\images\a3.jpg" />
+    <Content Include="Assets\Client\images\a4.jpg" />
+    <Content Include="Assets\Client\images\ab.jpg" />
+    <Content Include="Assets\Client\images\arrow.png" />
+    <Content Include="Assets\Client\images\b1.jpg" />
+    <Content Include="Assets\Client\images\b2.jpg" />
+    <Content Include="Assets\Client\images\b3.jpg" />
+    <Content Include="Assets\Client\images\b4.jpg" />
+    <Content Include="Assets\Client\images\bg.jpg" />
+    <Content Include="Assets\Client\images\bg2.jpg" />
+    <Content Include="Assets\Client\images\close_1.png" />
+    <Content Include="Assets\Client\images\h.jpg" />
+    <Content Include="Assets\Client\images\image1.png" />
+    <Content Include="Assets\Client\images\k1.jpg" />
+    <Content Include="Assets\Client\images\k2.jpg" />
+    <Content Include="Assets\Client\images\k3.jpg" />
+    <Content Include="Assets\Client\images\logo2.png" />
+    <Content Include="Assets\Client\images\m1.jpg" />
+    <Content Include="Assets\Client\images\m2.jpg" />
+    <Content Include="Assets\Client\images\m3.jpg" />
+    <Content Include="Assets\Client\images\m4.jpg" />
+    <Content Include="Assets\Client\images\m5.jpg" />
+    <Content Include="Assets\Client\images\m6.jpg" />
+    <Content Include="Assets\Client\images\m7.jpg" />
+    <Content Include="Assets\Client\images\m8.jpg" />
+    <Content Include="Assets\Client\images\m9.jpg" />
+    <Content Include="Assets\Client\images\mk1.jpg" />
+    <Content Include="Assets\Client\images\mk2.jpg" />
+    <Content Include="Assets\Client\images\mk3.jpg" />
+    <Content Include="Assets\Client\images\mk4.jpg" />
+    <Content Include="Assets\Client\images\mk5.jpg" />
+    <Content Include="Assets\Client\images\mk6.jpg" />
+    <Content Include="Assets\Client\images\mk7.jpg" />
+    <Content Include="Assets\Client\images\mk8.jpg" />
+    <Content Include="Assets\Client\images\mk9.jpg" />
+    <Content Include="Assets\Client\images\mm1.jpg" />
+    <Content Include="Assets\Client\images\mm2.jpg" />
+    <Content Include="Assets\Client\images\mm3.jpg" />
+    <Content Include="Assets\Client\images\mm4.jpg" />
+    <Content Include="Assets\Client\images\mm5.jpg" />
+    <Content Include="Assets\Client\images\mm6.jpg" />
+    <Content Include="Assets\Client\images\move-up.png" />
+    <Content Include="Assets\Client\images\off1.png" />
+    <Content Include="Assets\Client\images\off2.png" />
+    <Content Include="Assets\Client\images\pay1.png" />
+    <Content Include="Assets\Client\images\pay2.png" />
+    <Content Include="Assets\Client\images\pay3.png" />
+    <Content Include="Assets\Client\images\pay4.png" />
+    <Content Include="Assets\Client\images\pay5.png" />
+    <Content Include="Assets\Client\images\pay6.png" />
+    <Content Include="Assets\Client\images\pay7.png" />
+    <Content Include="Assets\Client\images\pay8.png" />
+    <Content Include="Assets\Client\images\pay9.png" />
+    <Content Include="Assets\Client\images\paypal.png" />
+    <Content Include="Assets\Client\images\search.png" />
+    <Content Include="Assets\Client\images\si1.jpg" />
+    <Content Include="Assets\Client\images\si2.jpg" />
+    <Content Include="Assets\Client\images\si3.jpg" />
+    <Content Include="Assets\Client\images\sii1.jpg" />
+    <Content Include="Assets\Client\images\sii2.jpg" />
+    <Content Include="Assets\Client\images\sii3.jpg" />
+    <Content Include="Assets\Client\images\user.jpg" />
+    <Content Include="Assets\Client\js\bootstrap.js" />
+    <Content Include="Assets\Client\js\creditly.js" />
+    <Content Include="Assets\Client\js\creditly2.js" />
+    <Content Include="Assets\Client\js\easing.js" />
+    <Content Include="Assets\Client\js\easyResponsiveTabs.js" />
+    <Content Include="Assets\Client\js\imagezoom.js" />
+    <Content Include="Assets\Client\js\jquery-2.2.3.min.js" />
+    <Content Include="Assets\Client\js\jquery.flexslider.js" />
+    <Content Include="Assets\Client\js\jquery.magnific-popup.js" />
+    <Content Include="Assets\Client\js\minicart.js" />
+    <Content Include="Assets\Client\js\move-top.js" />
+    <Content Include="Assets\Client\js\scroll.js" />
+    <Content Include="Assets\Client\js\SmoothScroll.min.js" />
+    <Content Include="Assets\Client\webfonts\fa-brands-400.svg" />
+    <Content Include="Assets\Client\webfonts\fa-regular-400.svg" />
+    <Content Include="Assets\Client\webfonts\fa-solid-900.svg" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -2101,6 +2190,19 @@
     <Content Include="Areas\Admin\Views\PhuongthucTT\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\PhuongthucTT\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\Sanpham\SearchSP.cshtml" />
+    <Content Include="Assets\Client\images\Thumbs.db" />
+    <Content Include="Assets\Client\webfonts\fa-brands-400.eot" />
+    <Content Include="Assets\Client\webfonts\fa-brands-400.ttf" />
+    <Content Include="Assets\Client\webfonts\fa-brands-400.woff" />
+    <Content Include="Assets\Client\webfonts\fa-brands-400.woff2" />
+    <Content Include="Assets\Client\webfonts\fa-regular-400.eot" />
+    <Content Include="Assets\Client\webfonts\fa-regular-400.ttf" />
+    <Content Include="Assets\Client\webfonts\fa-regular-400.woff" />
+    <Content Include="Assets\Client\webfonts\fa-regular-400.woff2" />
+    <Content Include="Assets\Client\webfonts\fa-solid-900.eot" />
+    <Content Include="Assets\Client\webfonts\fa-solid-900.ttf" />
+    <Content Include="Assets\Client\webfonts\fa-solid-900.woff" />
+    <Content Include="Assets\Client\webfonts\fa-solid-900.woff2" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -2124,17 +2226,18 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-3.6.4.slim.min.map" />
     <Content Include="Scripts\jquery-3.6.4.min.map" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Views\Base\" />
+    <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
