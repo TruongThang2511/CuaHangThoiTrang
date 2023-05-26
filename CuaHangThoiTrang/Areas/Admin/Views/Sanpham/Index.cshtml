@@ -10,6 +10,19 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+@using (Html.BeginForm("SearchSP", "Sanpham", FormMethod.Get))
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="col-md-4">
+                <input type="text" name="searchString" />
+            </div>
+            <div class="col-md-4">
+                <button type="submit">Tìm kiếm</button>
+            </div>
+        </div>
+    </div>
+}
 <table class="table">
     <tr>
         <th>

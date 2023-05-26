@@ -92,5 +92,11 @@ namespace CuaHangThoiTrang.Areas.Admin.Controllers
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult SearchSP(string searchString)
+        {
+            var sp = (from ss in _context.SANPHAMs select  ss).Where(p=> p.tenSP.Contains(searchString));
+            return View(sp.ToList());
+        }
     }
 }

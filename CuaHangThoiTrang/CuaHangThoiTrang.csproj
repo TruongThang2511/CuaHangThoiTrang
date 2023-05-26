@@ -2100,6 +2100,7 @@
     <Content Include="Areas\Admin\Views\PhuongthucTT\Create.cshtml" />
     <Content Include="Areas\Admin\Views\PhuongthucTT\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\PhuongthucTT\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Sanpham\SearchSP.cshtml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
