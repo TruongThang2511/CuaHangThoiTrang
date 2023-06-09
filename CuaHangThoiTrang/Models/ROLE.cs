@@ -13,7 +13,6 @@ namespace CuaHangThoiTrang.Models
         public ROLE()
         {
             NGUOIDUNGs = new HashSet<NGUOIDUNG>();
-            NGUOIDUNGs1 = new HashSet<NGUOIDUNG>();
         }
 
         [Key]
@@ -26,7 +25,5 @@ namespace CuaHangThoiTrang.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<NGUOIDUNG> NGUOIDUNGs { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<NGUOIDUNG> NGUOIDUNGs1 { get; set; }
     }
 }

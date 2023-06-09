@@ -112,9 +112,6 @@ label {
     color: #0879c9;
 }
 
-.modal-content {
-    border: 10px solid rgba(244, 92, 93, 0.82);
-}
 
 label.col-form-label {
     letter-spacing: 1px;
@@ -244,7 +241,7 @@ input[type="submit"] {
 
 /*-- header cart button --*/
 
-button.w3view-cart {
+.w3view-cart {
     font-size: 20px;
     color: #fff;
     width: 50px;
@@ -323,7 +320,7 @@ ul.multi-column-dropdown li a:hover {
 /*-- carousel-slider --*/
 
 .carousel-item.item1 {
-    background: url(../images/b1.jpg) no-repeat center;
+    background: url(../images/slide1.jpg) no-repeat center;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -332,7 +329,7 @@ ul.multi-column-dropdown li a:hover {
 }
 
 .carousel-item.item2 {
-    background: url(../images/b2.jpg) no-repeat center;
+    background: url(../images/slide2.jpg) no-repeat center;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -341,7 +338,7 @@ ul.multi-column-dropdown li a:hover {
 }
 
 .carousel-item.item3 {
-    background: url(../images/b3.jpg) no-repeat center;
+    background: url(../images/slide3.jpg) no-repeat center;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -350,7 +347,7 @@ ul.multi-column-dropdown li a:hover {
 }
 
 .carousel-item.item4 {
-    background: url(../images/b4.jpg) no-repeat center;
+    background: url(../images/slide4.jpg) no-repeat center;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -2908,7 +2905,7 @@ div#testimonials h4.m-title {
     .top_nav_right {
         padding: 0;
     }
-    button.w3view-cart {
+    .w3view-cart {
         font-size: 20px;
         width: 40px;
         height: 40px;
@@ -3172,5 +3169,42 @@ div#testimonials h4.m-title {
         width: 45%;
     }
 }
+.title {
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #555;
+}
 
+    .title:after {
+        content: "";
+        background: #ff523b;
+        widows: 80px;
+        height: 5px;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+.col-md-4 {
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.6s;
+}
+
+    .col-md-4 img {
+        width: 100%;
+    }
+
+.col-md-3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
 /*--//responsive--*/

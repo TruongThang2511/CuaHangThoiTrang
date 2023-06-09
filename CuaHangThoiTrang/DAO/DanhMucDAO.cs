@@ -15,10 +15,9 @@ namespace CuaHangThoiTrang.DAO
             context = new CHThoiTrangDbContext();
         }
 
-        public IQueryable<DANHMUC> ListDanhMuc()
+        public List<DANHMUC> ListDanhMuc()
         {
-            var res = (from ss in context.DANHMUCs select ss);
-            return res;
+            return context.DANHMUCs.ToList();
         }
     }
 }

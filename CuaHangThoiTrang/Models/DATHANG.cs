@@ -35,8 +35,7 @@ namespace CuaHangThoiTrang.Models
         [Column(TypeName = "money")]
         public decimal tongGiaTri { get; set; }
 
-        [StringLength(50)]
-        public string trangThai { get; set; }
+        public int trangThai { get; set; }
 
         [Required]
         [StringLength(200)]

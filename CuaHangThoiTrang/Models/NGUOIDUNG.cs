@@ -1,10 +1,11 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity.Spatial;
+
 namespace CuaHangThoiTrang.Models
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     [Table("NGUOIDUNG")]
     public partial class NGUOIDUNG
@@ -37,7 +38,7 @@ namespace CuaHangThoiTrang.Models
         [StringLength(100)]
         public string diachi { get; set; }
 
-        public DateTime ngaysinh { get; set; }
+        public DateTime? ngaysinh { get; set; }
 
         [Required]
         [StringLength(50)]
@@ -51,7 +52,5 @@ namespace CuaHangThoiTrang.Models
         public virtual ICollection<DATHANG> DATHANGs { get; set; }
 
         public virtual ROLE ROLE { get; set; }
-
-        public virtual ROLE ROLE1 { get; set; }
     }
 }

@@ -81,13 +81,7 @@ namespace CuaHangThoiTrang.Models
                 .HasMany(e => e.NGUOIDUNGs)
                 .WithRequired(e => e.ROLE)
                 .HasForeignKey(e => e.maRole)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<ROLE>()
-                .HasMany(e => e.NGUOIDUNGs1)
-                .WithRequired(e => e.ROLE1)
-                .HasForeignKey(e => e.maRole)
-                .WillCascadeOnDelete(false);
+                .WillCascadeOnDelete(false);;
 
             modelBuilder.Entity<SANPHAM>()
                 .HasMany(e => e.CHITIETDONHANGs)

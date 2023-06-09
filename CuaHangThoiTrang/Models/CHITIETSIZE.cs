@@ -19,7 +19,7 @@ namespace CuaHangThoiTrang.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int maSP { get; set; }
 
-        public int soluong { get; set; }
+        public int? soluong { get; set; }
 
         public virtual SIZE SIZE { get; set; }
 

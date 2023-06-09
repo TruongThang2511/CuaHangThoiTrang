@@ -11,6 +11,15 @@ namespace CuaHangThoiTrang.Areas.Admin.Controllers
     public class SanphamController : Controller
     {
         private CHThoiTrangDbContext _context = new CHThoiTrangDbContext();
+        public string ProcessUpload(HttpPostedFileBase file)
+        {
+            if (file == null)
+            {
+                return "";
+            }
+            file.SaveAs(Server.MapPath("~/Content/img/" + file.FileName));
+            return "/Content/img/" + file.FileName;
+        }
         public ActionResult Index(int? page)
         {
             if (page == null)
@@ -20,7 +29,6 @@ namespace CuaHangThoiTrang.Areas.Admin.Controllers
             int pageNum = page ?? 1;
             return View(all_sanpham.ToPagedList(pageNum, pageSize));
         }
-
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -31,7 +39,6 @@ namespace CuaHangThoiTrang.Areas.Admin.Controllers
             return View(sanpham);
 
         }
-
         public ActionResult Create()
         {
             return View();
@@ -49,7 +56,6 @@ namespace CuaHangThoiTrang.Areas.Admin.Controllers
 
             return View(sanpham);
         }
-
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -72,7 +78,6 @@ namespace CuaHangThoiTrang.Areas.Admin.Controllers
             }
             return View(sanpham);
         }
-
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -92,7 +97,6 @@ namespace CuaHangThoiTrang.Areas.Admin.Controllers
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
-
         public ActionResult SearchSP(string searchString)
         {
             var sp = (from ss in _context.SANPHAMs select  ss).Where(p=> p.tenSP.Contains(searchString));

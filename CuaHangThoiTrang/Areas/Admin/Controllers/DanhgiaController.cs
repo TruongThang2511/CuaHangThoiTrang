@@ -11,6 +11,7 @@ namespace CuaHangThoiTrang.Areas.Admin.Controllers
     public class DanhgiaController : Controller
     {
         private CHThoiTrangDbContext _context = new CHThoiTrangDbContext();
+
         public ActionResult Index(int? page)
         {
             if (page == null)

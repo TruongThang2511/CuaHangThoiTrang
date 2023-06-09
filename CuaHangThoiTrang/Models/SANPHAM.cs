@@ -32,13 +32,13 @@ namespace CuaHangThoiTrang.Models
         public int gia { get; set; }
 
         [Required]
-        [StringLength(20)]
+        [StringLength(30)]
         public string hinh { get; set; }
 
-        [StringLength(20)]
+        [StringLength(30)]
         public string hinh1 { get; set; }
 
-        [StringLength(20)]
+        [StringLength(30)]
         public string hinh2 { get; set; }
 
         public int soLuong { get; set; }

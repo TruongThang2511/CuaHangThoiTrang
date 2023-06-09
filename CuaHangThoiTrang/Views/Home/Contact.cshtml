@@ -1,8 +1,9 @@
 ﻿
 @{
-    ViewBag.Title = "About";
+    ViewBag.Title = "Contact";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 <!-- page -->
 <div class="services-breadcrumb">
     <div class="agile_inner_breadcrumb">
@@ -94,9 +95,11 @@
 </div>
 <!-- //contact -->
 <!-- map -->
-@*<div class="map mt-sm-0 mt-4">
-    <iframe src="https://www.google.com/maps/place/HUTECH+University+-+E+Campus+(SHTP)/@10.8555748,106.7825278,17z/data=!3m1!4b1!4m6!3m5!1s0x3175276e7ea103df:0xb6cf10bb7d719327!8m2!3d10.8555748!4d106.7851027!16s%2Fg%2F11c6tvvgch?entry=ttu"
-            allowfullscreen></iframe>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=@ViewData["APIKey"]&callback=initMap">
+</script>
+<div class="map mt-sm-0 mt-4">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62698.55972448866!2d106.67735333810462!3d10.837311517155552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527c3debb5aad%3A0x5fb58956eb4194d0!2zxJDhuqFpIEjhu41jIEh1dGVjaCBLaHUgRQ!5e0!3m2!1svi!2s!4v1683602674991!5m2!1svi!2s" width="600" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
-*@<!-- //map -->
+<!-- //map -->
 <!-- middle section -->

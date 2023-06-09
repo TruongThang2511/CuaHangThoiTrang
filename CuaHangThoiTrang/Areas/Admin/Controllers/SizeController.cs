@@ -20,7 +20,6 @@ namespace CuaHangThoiTrang.Areas.Admin.Controllers
             int pageNum = page ?? 1;
             return View(all_size.ToPagedList(pageNum, pageSize));
         }
-
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -31,7 +30,6 @@ namespace CuaHangThoiTrang.Areas.Admin.Controllers
             return View(size);
             
         }
-
         public ActionResult Create()
         {
             return View();
@@ -49,7 +47,6 @@ namespace CuaHangThoiTrang.Areas.Admin.Controllers
 
             return View(size);
         }
-
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -59,7 +56,6 @@ namespace CuaHangThoiTrang.Areas.Admin.Controllers
                 return HttpNotFound();
             return View(size);
         }
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "maSize,tenS,mota")] SIZE size)
@@ -72,7 +68,6 @@ namespace CuaHangThoiTrang.Areas.Admin.Controllers
             }
             return View(size);
         }
-
         public ActionResult Delete(int? id)
         {
             if (id == null)

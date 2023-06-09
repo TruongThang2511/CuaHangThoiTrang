@@ -20,7 +20,6 @@ namespace CuaHangThoiTrang.Areas.Admin.Controllers
             int pageNum = page ?? 1;
             return View(all_mau.ToPagedList(pageNum, pageSize));
         }
-
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -31,7 +30,6 @@ namespace CuaHangThoiTrang.Areas.Admin.Controllers
             return View(mau);
 
         }
-
         public ActionResult Create()
         {
             return View();
@@ -49,7 +47,6 @@ namespace CuaHangThoiTrang.Areas.Admin.Controllers
 
             return View(mau);
         }
-
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -72,7 +69,6 @@ namespace CuaHangThoiTrang.Areas.Admin.Controllers
             }
             return View(mau);
         }
-
         public ActionResult Delete(int? id)
         {
             if (id == null)

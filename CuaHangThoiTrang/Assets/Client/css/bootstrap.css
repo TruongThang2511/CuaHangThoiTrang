@@ -1131,7 +1131,7 @@ pre code {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 75%;
     flex: 0 0 75%;
-    max-width: 75%;
+    max-width: 100%;
   }
   .col-md-10 {
     -webkit-box-flex: 0;
@@ -1332,7 +1332,6 @@ pre code {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 75%;
     flex: 0 0 75%;
-    max-width: 75%;
   }
   .col-lg-10 {
     -webkit-box-flex: 0;
@@ -2570,9 +2569,9 @@ fieldset:disabled a.btn {
 }
 
 .btn-success {
-  color: #fff;
-  background-color: #28a745;
-  border-color: #28a745;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
 }
 
 .btn-success:hover {
@@ -4720,13 +4719,19 @@ tbody.collapse.show {
 }
 
 .pagination {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-left: 0;
-  list-style: none;
-  border-radius: 0.25rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    list-style: none;
+    border-radius: 0.25rem;
 }
+
+    .pagination li {
+        margin-right: 5px;
+        margin-left: 5px;
+    }
 
 .page-link {
   position: relative;
@@ -5458,8 +5463,6 @@ button.close {
   pointer-events: auto;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.3rem;
   outline: 0;
 }
 

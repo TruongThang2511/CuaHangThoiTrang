@@ -11,15 +11,11 @@ namespace CuaHangThoiTrang.Models
     {
         [Key]
         [Column(Order = 0)]
-        public int maChitiet { get; set; }
-
-        [Key]
-        [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int maDH { get; set; }
 
         [Key]
-        [Column(Order = 2)]
+        [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int maSP { get; set; }
 
