@@ -55,11 +55,15 @@ namespace CuaHangThoiTrang.Controllers
             return View(all_sanpham.ToPagedList(pageNum, pageSize));
         }
 
-        public ActionResult timkiem(string tensp)
+        public ActionResult timkiem(string tensp, int? page)
         {
-            SanPhamDAO sp = new SanPhamDAO();
-            ViewData["TimKiem"] = sp.listspTimkiem(tensp);
-            return View();
+            ViewBag.tenSP = tensp;
+            if (page == null)
+                page = 1;
+            var all_sanpham = db.SANPHAMs.OrderBy(m => m.maSP).Where(n => n.tenSP.Contains(tensp));
+            int pageSize = 20;
+            int pageNum = page ?? 1;
+            return View(all_sanpham.ToPagedList(pageNum, pageSize));
         }
 
         public ActionResult ChitietSP(int id)

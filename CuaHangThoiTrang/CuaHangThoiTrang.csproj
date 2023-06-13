@@ -3103,6 +3103,7 @@
     <Content Include="Views\Dathang\Index.cshtml" />
     <Content Include="Views\Dathang\Details.cshtml" />
     <Content Include="Views\GioHang\Thanhtoanmomo.cshtml" />
+    <Content Include="Views\Home\timkiem.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

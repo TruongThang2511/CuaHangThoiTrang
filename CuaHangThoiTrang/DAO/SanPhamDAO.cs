@@ -24,7 +24,7 @@ namespace CuaHangThoiTrang.DAO
 
         public List<SANPHAM> listspTimkiem(string tensp)
         {
-            string search = "select * from SanPham where ten like '%" + tensp + "%'";
+            string search = "select * from SanPham where tenSP like '%" + tensp + "%'";
             var rs = context.SANPHAMs.SqlQuery(search).ToList();
             return rs;
         }
