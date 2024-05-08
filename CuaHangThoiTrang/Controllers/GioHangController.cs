@@ -343,9 +343,11 @@ namespace CuaHangThoiTrang.Controllers
             NGUOIDUNG kh = (NGUOIDUNG)Session["UserId"];
             List<GIOHANG> gh = LayGioHang();
             ddh.maND = kh.maND;
+            ddh.hotenKH = kh.hoten;
+            ddh.email = kh.email;
             ddh.ngayDat = DateTime.Now;
             ddh.maPT = 2;
-            ddh.diaChi = Session["diachinhanhang"].ToString();
+            ddh.diaChi = Session["diachinhanhang"].ToString(); ;         
             decimal tongtien = 0;
             foreach (var item in gh)
             {
@@ -368,7 +370,7 @@ namespace CuaHangThoiTrang.Controllers
                 db.CHITIETDONHANGs.Add(ctDH);
             }
             db.SaveChanges();
-            return RedirectToAction("Index", "Dathang");
+            return View();
         }
 
         [HttpPost]

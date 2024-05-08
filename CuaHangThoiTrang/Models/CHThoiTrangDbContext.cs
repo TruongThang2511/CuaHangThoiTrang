@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace CuaHangThoiTrang.Models
 {
-    public partial class CHThoiTrangDbContext : DbContext
+    public partial class  : DbContext
     {
         public CHThoiTrangDbContext()
             : base("name=CHThoiTrangDbContext")
